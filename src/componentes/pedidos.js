@@ -1,7 +1,8 @@
 import { cervezas } from "./cervezas";
 
 export const formulario = {
-    template: `<form class="m-3">
+    template: `<h1>Selecciona tu cerveza y haz tu pedido</h1>
+<form class="m-3">
     <div class="form-group">
       <label class="text-white fs-3" for="validation01">Nombre</label>
       <input type="text" class="form-control bg-black text-white" id="nombre" 
@@ -53,7 +54,7 @@ export const descripcionCerveza = {
         const posicionCerveza = cervezas.findIndex(nombre=>nombre.id == id)
 
         const html=`<div>
-    <h1 class="text-white">${cervezas[posicionCerveza].nombre}</h1>
+    <h1 class="text-white text-center">${cervezas[posicionCerveza].nombre}</h1>
     <img class="w-25 m-3" src="${cervezas[posicionCerveza].imagen}" alt="FotoCerveza">
     <p class="text-bold text-white fw-bold fs-4">${cervezas[posicionCerveza].descripcion}</p>
 </div>

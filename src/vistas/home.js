@@ -9,7 +9,7 @@ export const home ={
               <div class="col-6 descripcion d-flex"></div>
           </div>
         </div>
-        <div class="col-12 pedidos pt-5"></div>
+        <div class="col-12 shadow pedidos pt-5"></div>
     </div>`,
 
     script: ()=>{
