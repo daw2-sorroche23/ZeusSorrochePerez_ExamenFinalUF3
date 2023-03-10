@@ -58,7 +58,7 @@ const home = {
               <div class="col-6 descripcion d-flex"></div>
           </div>
         </div>
-        <div class="col-12 pedidos pt-5"></div>
+        <div class="col-12 shadow pedidos pt-5"></div>
     </div>`,
   script: () => {
     console.log("Estas en la pagina del Home");
@@ -107,7 +107,8 @@ const cervezas = [
   }
 ];
 const formulario = {
-  template: `<form class="m-3">
+  template: `<h1>Selecciona tu cerveza y haz tu pedido</h1>
+<form class="m-3">
     <div class="form-group">
       <label class="text-white fs-3" for="validation01">Nombre</label>
       <input type="text" class="form-control bg-black text-white" id="nombre" 
@@ -146,7 +147,7 @@ const descripcionCerveza = {
   script: (id) => {
     const posicionCerveza = cervezas.findIndex((nombre) => nombre.id == id);
     const html = `<div>
-    <h1 class="text-white">${cervezas[posicionCerveza].nombre}</h1>
+    <h1 class="text-white text-center">${cervezas[posicionCerveza].nombre}</h1>
     <img class="w-25 m-3" src="${cervezas[posicionCerveza].imagen}" alt="FotoCerveza">
     <p class="text-bold text-white fw-bold fs-4">${cervezas[posicionCerveza].descripcion}</p>
 </div>
@@ -156,21 +157,24 @@ const descripcionCerveza = {
   }
 };
 const tablaPedidos = {
-  template: `<table class="table table-striped">
+  template: `<h1>Esto es lo que te has tomado ya...</h1>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Nombre</th>
-      <th scope="col">Mesa</th>
       <th scope="col">Cerveza</th>
       <th scope="col">Cantidad</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Estrella Galicia</td>
+      <td>5</td>
+      <td><button class="btn bg-danger">Eliminar</button></td>
+      <td><button class="btn bg-primary">Editar</button></td> 
+    </tr>
+    <tr>
+      <td>San Miguel Especial</td>
+      <td>2</td>
       <td><button class="btn bg-danger">Eliminar</button></td>
       <td><button class="btn bg-primary">Editar</button></td> 
     </tr>
