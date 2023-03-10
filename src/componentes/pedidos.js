@@ -55,8 +55,8 @@ export const descripcionCerveza = {
 
         const html=`<div>
     <h1 class="text-white text-center">${cervezas[posicionCerveza].nombre}</h1>
-    <img class="w-25 m-3" src="${cervezas[posicionCerveza].imagen}" alt="FotoCerveza">
     <p class="text-bold text-white fw-bold fs-4">${cervezas[posicionCerveza].descripcion}</p>
+    <img class="w-25 m-3" src="${cervezas[posicionCerveza].imagen}" alt="FotoCerveza">
 </div>
 `
 
