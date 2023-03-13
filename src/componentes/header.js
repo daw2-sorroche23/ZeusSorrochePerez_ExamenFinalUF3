@@ -1,3 +1,4 @@
+//Hacemos el componente header que mas adelante lo inyectaremos en la etiqueta header
 export const header={
     template:`<div class="container-fluid">
     <div class="row">

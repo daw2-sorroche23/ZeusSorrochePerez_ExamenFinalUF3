@@ -1,3 +1,6 @@
+import { cervezas } from "./cervezas"
+import { formulario } from "./pedidos"
+
 export const tablaPedidos = {
     template: `<h1>Esto es lo que te has tomado ya...</h1>
 <table class="table table-striped">
@@ -8,9 +11,14 @@ export const tablaPedidos = {
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Estrella Galicia</td>
-      <td>5</td>
+  `,
+}
+
+  script:()=>{
+  
+    let html=` <tr>
+      <td></td>
+      <td></td>
       <td><button class="btn bg-danger">Eliminar</button></td>
       <td><button class="btn bg-primary">Editar</button></td> 
     </tr>
@@ -19,7 +27,10 @@ export const tablaPedidos = {
       <td>2</td>
       <td><button class="btn bg-danger">Eliminar</button></td>
       <td><button class="btn bg-primary">Editar</button></td> 
-    </tr>
-  </tbody>
-</table>`
-}
+    </tr>`
+  }
+
+
+
+
+
