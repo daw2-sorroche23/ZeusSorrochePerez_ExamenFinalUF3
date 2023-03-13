@@ -110,19 +110,19 @@ const formulario = {
   template: `<h1>Selecciona tu cerveza y haz tu pedido</h1>
 <form class="m-3" id="validar">
     <div class="form-group">
-      <label class="text-white fs-3"    >Nombre de grupo</label>
+      <label class="text-white fs-3">Nombre de grupo</label>
       <input type="text" class="form-control bg-black text-white" id="nombre" required maxlength="10" minlength="4"placeholder="Nombre" required>
-        <!-- mensaje si valida -->
+        <!-- mensaje validado -->
         <div class="valid-feedback">Todo correcto </div>
-        <!-- mensaje si no valida -->
+        <!-- mensaje no validado -->
         <div class="invalid-feedback">Minimo de caracteres 4 y maximo 10</div>
     </div>
     <div class="form-group">
     <label class="text-white fs-3" for="validation02">Mesa</label>
       <input type="number" class="form-control bg-black text-white" id="Mesa" placeholder="Numero de la mesa"  min="1" max="15" required>
-         <!-- mensaje si valida -->
+         <!-- mensaje validado -->
          <div class="valid-feedback">Todo correcto </div>
-         <!-- mensaje si no valida -->
+         <!-- mensaje no validado -->
         <div class="invalid-feedback">El nuemro de la mesa tiene que ser entre 1 y 15</div>
     </div>
     <div class="form-group">
@@ -132,9 +132,9 @@ const formulario = {
     <div class="form-group">
         <label class="text-white fs-3" for="validation02">Cantidad</label>
         <input type="number" class="form-control bg-black text-white" id="cantidad" placeholder="Cantidad de cervezas" min="1" required>
-        <!-- mensaje si valida -->
+        <!-- mensaje validado -->
         <div class="valid-feedback">Todo correcto </div>
-        <!-- mensaje si no valida -->
+        <!-- mensaje no validado -->
        <div class="invalid-feedback">No puedes pedir 0 consumiciones</div>
     </div>
     <div>
@@ -152,15 +152,6 @@ const formulario = {
       descripcionCerveza.script(event.target.value);
     });
     document.querySelector("#validar").classList.add("was-validated");
-    document.querySelector("#enviar").addEventListener("click", (e) => {
-      e.preventDefault();
-      const formEditar = document.querySelector("#validar");
-      formEditar.classList.add("was-validated");
-      if (formEditar.checkValidity()) {
-        formEditar.classList.remove("was-validated");
-        router.editarEnviar();
-      }
-    });
   }
 };
 const descripcionCerveza = {
